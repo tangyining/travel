@@ -17,9 +17,9 @@ public class ActiveUserServlet extends HttpServlet {
         if(code!=null){
             UserService service = new UserServiceImpl();
             boolean flag=service.active(code);
-            String msg=null;
+            String msg;
             if(flag){
-                msg="激活成功,请<a href='login.html'>登录</a>";
+                msg="激活成功,请<a href='login.html'>登录!</a>";
             }else{
                 msg="激活失败,请联系管理员!";
             }
